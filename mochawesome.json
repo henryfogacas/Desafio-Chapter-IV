@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-03T18:46:25.344Z",
+    "end": "2022-03-03T18:46:40.720Z",
+    "duration": 15376,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3a2f384c-09c9-42eb-a962-2e704b1054a2",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.js",
+      "file": "cypress/integration/cadastro.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bd948108-69b5-46ff-9ca9-f3c11f2c2537",
+          "title": "Logar email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu informar o email no campo de novo cadastro, então deve redirecionar para a tela com todos os dados necessários para criar seu cadastro",
+              "fullTitle": "Logar email Quando eu informar o email no campo de novo cadastro, então deve redirecionar para a tela com todos os dados necessários para criar seu cadastro",
+              "timedOut": null,
+              "duration": 3707,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php?controller=authentication&back=my-account');\ncy.get('input[name=email_create]').type(chance.email());\ncy.get('#SubmitCreate > span').click();",
+              "err": {},
+              "uuid": "78986792-83ae-4565-bc84-7a0be689ea71",
+              "parentUUID": "bd948108-69b5-46ff-9ca9-f3c11f2c2537",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "6cb500d3-9c49-48fb-bc1d-0abe051bb168",
+              "title": "Completar dados do cadastro",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+                  "fullTitle": "Logar email Completar dados do cadastro Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+                  "timedOut": null,
+                  "duration": 8764,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#id_gender1').check();\ncy.get('input[name=customer_firstname]').type(chance.first());\ncy.get('input[name=customer_lastname]').type(chance.last());\ncy.get('input[name=passwd]').type('Testsenha123');\ncy.get('select[name=days]').select('21', {\n  force: true\n});\ncy.get('select[name=months]').select('July', {\n  force: true\n});\ncy.get('select[name=years]').select('2006', {\n  force: true\n});\ncy.get('input[name=firstname]').type(chance.first());\ncy.get('input[name=lastname]').type(chance.last());\ncy.get('input[name=company]').type('TrindTech');\ncy.get('input[name=address1]').type(chance.address());\ncy.get('input[name=city]').type('Gravataí');\ncy.get('select[name=id_state]').select('Alabama', {\n  force: true\n});\ncy.get('input[name=postcode]').type('21070');\ncy.get('input[name=phone_mobile]').type('999391363');\ncy.get('input[name=alias]').type(chance.address());\ncy.get(' #submitAccount > span').click();\ncy.url().should('contain', 'my-account');",
+                  "err": {},
+                  "uuid": "2371a25b-e95b-4077-834f-5fb1962225be",
+                  "parentUUID": "6cb500d3-9c49-48fb-bc1d-0abe051bb168",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2371a25b-e95b-4077-834f-5fb1962225be"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 8764,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "78986792-83ae-4565-bc84-7a0be689ea71"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3707,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.0"
+    }
+  }
+}
